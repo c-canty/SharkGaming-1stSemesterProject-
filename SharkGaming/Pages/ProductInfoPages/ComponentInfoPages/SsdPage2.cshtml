@@ -1,0 +1,77 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.ComponentInfoPages.SsdPage2Model
+@{
+}
+
+@foreach (var x in Model.ssds)
+{
+    if (x.Id == 31)
+    {
+        <div class="text-center">
+            <h1 style="color:white">
+                @x.Name
+            </h1>
+        </div>
+
+        <br />
+
+        <form method="post">
+            <div class="row text-center">
+
+                <div class="column col-6">
+                    <img src="@x.Img" style="width:65%" />
+                </div>
+
+                <div class="column col-6">
+                    <h3 style="color:white">Description</h3>
+                    <p style="color:white">@x.Description</p>
+                    <h1 style="color:chocolate">Price: @x.Price KR.</h1>
+                    <input type="submit" asp-page-handler="AddToCart" asp-for="productId" value="Add To Cart" class="btn btn-green" />
+                    <input type="hidden" asp-for="productId">
+                    <br />
+                </div>
+            </div>
+        </form>
+
+
+        <table class="table table-bordered center bg-dark text-white" style="width:85%">
+            <thead>
+                <tr>
+                    <th style="width:50%">Specification</th>
+                    <th style="width: 50%">Info</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Capacity</td>
+                    <td>@x.Capacity</td>
+                </tr>
+                <tr>
+                    <td>Compatible bay</td>
+                    <td>@x.CompatibleBay</td>
+                </tr>
+                <tr>
+                    <td>Internal date rate</td>
+                    <td>@x.InternalDateRate</td>
+                </tr>
+                <tr>
+                    <td>Drive transfer rate</td>
+                    <td>@x.DriveTransferRate</td>
+                </tr>
+                <tr>
+                    <td>4KB random read</td>
+                    <td>@x.FourKBRandomRead</td>
+                </tr>
+                <tr>
+                    <td>4KB random write</td>
+                    <td>@x.FourKBRandomWrite</td>
+                </tr>
+                <tr>
+                    <td>NAND flash memory type</td>
+                    <td>@x.NANDFlashMemoryType</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}

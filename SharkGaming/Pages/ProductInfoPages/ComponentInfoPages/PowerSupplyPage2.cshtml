@@ -1,0 +1,82 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.ComponentInfoPages.PowerSupplyPage2Model
+@{
+}
+
+@foreach (var x in Model.powerSupply)
+{
+    if (x.Id == 22)
+    {
+        <div class="text-center">
+            <h1 style="color:white">
+                @x.Name
+            </h1>
+        </div>
+
+        <br />
+
+        <form method="post">
+            <div class="row text-center">
+
+                <div class="column col-6">
+                    <img src="@x.Img" style="width:65%" />
+                </div>
+
+                <div class="column col-6">
+                    <h3 style="color:white">Description</h3>
+                    <p style="color:white">@x.Description</p>
+                    <h1 style="color:chocolate">Price: @x.Price KR.</h1>
+                    <input type="submit" asp-page-handler="AddToCart" asp-for="productId" value="Add To Cart" class="btn btn-green" />
+                    <input type="hidden" asp-for="productId">
+                    <br />
+                </div>
+            </div>
+        </form>
+
+
+        <table class="table table-bordered center bg-dark text-white" style="width:85%">
+            <thead>
+                <tr>
+                    <th style="width:50%">Specification</th>
+                    <th style="width: 50%">Info</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>PSU form factor</td>
+                    <td>@x.PSUFormFactor</td>
+                </tr>
+                <tr>
+                    <td>Colour category</td>
+                    <td>@x.ColourCategory</td>
+                </tr>
+                <tr>
+                    <td>Class type</td>
+                    <td>@x.ClassType</td>
+                </tr>
+                <tr>
+                    <td>Power capacity</td>
+                    <td>@x.PowerCapacity</td>
+                </tr>
+                <tr>
+                    <td>Molex</td>
+                    <td>
+                        @if (x.Molex == true)
+                        {
+                            <text>True</text>
+                        }
+                        else
+                        {
+                            <text>False</text>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cooling system</td>
+                    <td>@x.CoolingSystem</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}

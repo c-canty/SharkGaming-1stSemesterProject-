@@ -1,0 +1,53 @@
+[
+  {
+    "SizeType": "MidTower (ATX)",
+    "Colour": "Black",
+    "AmountOfFans": 10,
+    "RGB": true,
+    "Width": 280,
+    "Depth": 415,
+    "Height": 427,
+    "SupportMotherboard": "ATX",
+    "BuildInInterface": "2xUSB 3.0 \u0026 1x USB 2.0 \u0026 HD Audio",
+    "Id": 0,
+    "Name": "Shark Gaming Aquarium",
+    "Price": 999,
+    "Img": "/Images/Components/Case1.png",
+    "Description": "Shark gaming aquarium is a case that allows you to connect to the motherboard and control RGB through the software.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/CasePage1"
+  },
+  {
+    "SizeType": "MiniTower (m-ATX)",
+    "Colour": "Black",
+    "AmountOfFans": 4,
+    "RGB": true,
+    "Width": 210,
+    "Depth": 405,
+    "Height": 425,
+    "SupportMotherboard": "ATX",
+    "BuildInInterface": "2xUSB 3.0 \u0026 1x USB 2.0 \u0026 HD Audio",
+    "Id": 1,
+    "Name": "Shark Gaming MaelStrom",
+    "Price": 599,
+    "Img": "/Images/Components/Case2.png",
+    "Description": "This case is the perfect choice for the gamer who is a casual but doesn\u0027t want to look like one.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/CasePage2"
+  },
+  {
+    "SizeType": "MidTower (ATX)",
+    "Colour": "White",
+    "AmountOfFans": 7,
+    "RGB": true,
+    "Width": 240,
+    "Depth": 520,
+    "Height": 520,
+    "SupportMotherboard": "ATX",
+    "BuildInInterface": "1 x USB 3.1 gen 2 Type-C (Needs Front USB-C Supported Motherboard), 2xUSB 3.0, Power button, Microphone, Headphone, D-RGB Mode button, D-RGB Color button",
+    "Id": 2,
+    "Name": "Phanteks Enthoo Evolv X Satin Black Kabinet",
+    "Price": 1749,
+    "Img": "/Images/Components/Case3.png",
+    "Description": "This case is specifically designed to make any casual gamer cry.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/CasePage3"
+  }
+]

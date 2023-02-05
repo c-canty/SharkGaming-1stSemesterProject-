@@ -1,0 +1,254 @@
+﻿@page
+@using SharkGaming.Products
+@model SharkGaming.Pages.TestSite.TestRoomModel
+@{
+}
+
+<div class="text-center">
+    <h1 style="color:white">Components</h1>
+</div>
+
+<br />
+
+@*Table List for testing. For at komme ind til listen components har vi prikket os igennem TestSite/TestRoomModel for at komme ind til listen som hedder "components." *@
+<table class="table table-bordered border-black bg-dark text-white">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Type
+            </th>
+        </tr>
+    </thead>
+    <tbody class="hoverTable">
+        @if (Model.cases != null)
+        {
+            foreach (var item in Model.cases)
+        {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        Case
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.caseFan != null)
+        {
+            foreach (var item in Model.caseFan)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        CaseFan
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.cPUAirCoolings != null)
+        {
+            foreach (var item in Model.cPUAirCoolings)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        CPU Air Cooling
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.cPUWaterCoolings != null)
+        {
+            foreach (var item in Model.cPUWaterCoolings)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        CPU Water Cooling
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.cPU != null)
+        {
+            foreach (var item in Model.cPU)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        CPU
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.gPU != null)
+        {
+            foreach (var item in Model.gPU)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        GPU
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.motherboards != null)
+        {
+            foreach (var item in Model.motherboards)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        Motherboards
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.powerSupplies != null)
+        {
+            foreach (var item in Model.powerSupplies)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        Power Supply
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.ram != null)
+        {
+            foreach (var item in Model.ram)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        RAM
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.mdot2s != null)
+        {
+            foreach (var item in Model.mdot2s)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        Mdot.2
+                    </td>
+                </tr>
+            }
+        }
+        @if (Model.solidStateDrives != null)
+        {
+            foreach (var item in Model.solidStateDrives)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Price
+                    </td>
+                    <td>
+                        Solid State Drives
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,94 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.ComponentInfoPages.CasePage2Model
+@{
+}
+
+@foreach (var x in Model.cases)
+{
+    if (x.Id == 1)
+    {
+        <div class="text-center">
+            <h1 style="color:white">
+                @x.Name
+            </h1>
+        </div>
+
+        <br />
+
+        <form method="post">
+            <div class="row text-center">
+
+                <div class="column col-6">
+                    <img src="@x.Img" style="width:65%" />
+                </div>
+
+                <div class="column col-6">
+                    <h3 style="color:white">Description</h3>
+                    <p style="color:white">@x.Description</p>
+                    <h1 style="color:chocolate">Price: @x.Price KR.</h1>
+                    <input type="submit" asp-page-handler="AddToCart" asp-for="productId" value="Add To Cart" class="btn btn-green" />
+                    <input type="hidden" asp-for="productId">
+                    <br />
+                </div>
+            </div>
+        </form>
+
+
+        <table class="table table-bordered center bg-dark text-white" style="width:85%">
+            <thead>
+                <tr>
+                    <th style="width:50%">Specification</th>
+                    <th style="width: 50%">Info</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Size type</td>
+                    <td>@x.SizeType</td>
+                </tr>
+                <tr>
+                    <td>Colour</td>
+                    <td>@x.Colour</td>
+                </tr>
+                <tr>
+                    <td>Amount of fans</td>
+                    <td>@x.AmountOfFans</td>
+                </tr>
+                <tr>
+                    <td>RGB</td>
+                    <td>
+                        @if (x.RGB == true)
+                        {
+                            <text>True</text>
+                        }
+                        else
+                        {
+                            <text>False</text>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>Width</td>
+                    <td>@x.Width</td>
+                </tr>
+                <tr>
+                    <td>Depth</td>
+                    <td>@x.Depth</td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>@x.Height</td>
+                </tr>
+                <tr>
+                    <td>Support motherboard</td>
+                    <td>@x.SupportMotherboard</td>
+                </tr>
+                <tr>
+                    <td>Build-in interface</td>
+                    <td>@x.BuildInInterface</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}

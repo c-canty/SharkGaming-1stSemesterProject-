@@ -1,0 +1,120 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: rgb(111,142,255);
+    background: radial-gradient(circle, rgba(111,142,255,0.861782212885154) 9%, rgba(13,41,185,1) 49%, rgba(0,2,18,1) 97%);
+}
+footer{
+    background-color: transparent;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+    width: 100%;
+    overflow: auto
+}
+
+.navbar a{
+    float: left;
+    padding: 10px;
+    color: red;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background-color: #829dff;
+}
+
+.hoverTable tr:hover {
+    background-color: #829dff;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar a {
+        float: none;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.logo-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.navbar {
+    padding: 0rem;
+    margin-bottom: 2rem;
+}
+
+.dropdown .dropdown-menu {
+    border-radius: 0;
+}
+
+
+@media (min-width: 768px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        border-radius: 0;
+    }
+}
+
+.text-orange {
+    color:chocolate;
+}
+
+.bgGrey {
+    background-color: #151515;
+}
+
+.btn-green {
+    background-color: #4B9A10;
+    color: white;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.columnCustom {
+    column-count: 3;
+    column-fill: auto;
+}
+
+table.border-black {
+    border-color: black;
+}

@@ -1,0 +1,65 @@
+﻿@page
+@model SharkGaming.Pages.OrderInfoPages.OrderConfirmationPageModel
+@{
+}
+<h1 class="text-white">Thank you for your order</h1>
+<br />
+
+<h3 class=" text-white">Please confirm your email address</h3>
+<form method="post" class="form-inline">
+<div class="input-group mb-3">
+
+    <div class="input-group-prepend">
+
+</div>
+        <input asp-for="Email" class="form-control mr-1" placeholder="Enter email" />
+        <input type="submit" asp-page-handler="EmailConfirmation" value="Confirm" class="btn btn-dark" />
+</div>
+</form>
+@if (Model.Email != null)
+{
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th>
+                    Order ID
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Order Date
+                </th>
+                <th>
+                    Total Price
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="bg-dark text-white">
+                <td>
+                    @Model.order.Id
+                </td>
+                <td>
+                    @Model.Email
+                </td>    
+                <td>
+                    @Model.order.Dt
+                </td>
+                <td>
+                    @Model.TotalPrice kr
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h3 class=" text-white"> 
+        Details of your order have been sent to your email address at @Model.Email
+    </h3>
+
+    @*<a asp-page="/Index" class="btn btn-dark">Back to main menu</a>*@
+    <form method="post" class="form-inline">
+    <input type="submit" asp-page-handler="RefreshCart" value="Confirm Order and return to Home Page" class="btn btn-dark" />
+    </form>
+}
+
+

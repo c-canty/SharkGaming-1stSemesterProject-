@@ -1,0 +1,84 @@
+﻿@using SharkGaming.Pages.Login
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - SharkGaming</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/SharkGaming.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-black border-bottom border-dark box-shadow mb-3">
+
+@*    Nav-bar 1*@
+            <div class="collapse navbar-collapse flex-column " id="navbar">
+
+                <ul class="navbar-nav w-100 px-3">
+
+                    <a class="navbar-brand" asp-area="" asp-page="/Index">
+                        <div class="logo-image">
+                            <img src="~/images/logo images/sharkgamingfulllogo.png" class="img-fluid" />
+                        </div>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-end">
+                        
+                        <a href="/ProductInfoPages/SearchProductsPage">Search All Products <i class="fa fa-fw fa-search"></i></a>
+                        <a href="/OrderInfoPages/OrderItemsPage"><i class="fa fa-fw fa-shopping-cart"></i></a>
+                        <a href="
+                            @if(LogInPageModel.LoggedInUser == null)
+                                {<text>/LogIn/LoginPage</text>}
+                            else{<text>/LogIn/UserAccountPage</text>} 
+                        "><i class="fa fa-fw fa-user"></i></a>
+                        <a href="/Fuckmig/EasterEgg"><i class="fa fa-fw fa-envelope"></i></a>
+                    </div>
+                </ul>
+
+
+@*        Nav-bar 2*@
+                <ul class="navbar-nav justify-content-center w-100 bgGrey px-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-page="/ProductInfoPages/PreBuildListPage">Pre-Builds</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" asp-area="" asp-page="/ProductInfoPages/ProductListPage">Components</a>
+                    </li>
+
+                    @{if (LogInPageModel.LoggedInUser != null && LogInPageModel.LoggedInUser.Username == "admin")
+                    {
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-page="/AdminSite/AdminMainPage">Admin Main Page</a>
+                            </li>
+                    }}
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer text-muted">
+        <div class="container">
+            &copy; 2022 - SharkGaming - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,47 @@
+[
+  {
+    "DriveTransferRate": 530,
+    "FourKBRandomRead": 11000,
+    "FourKBRandomWrite": 35000,
+    "NANDFlashMemoryType": "Quad-niveau celle",
+    "Capacity": 1000,
+    "CompatibleBay": "2.5\u00A8",
+    "InternalDateRate": 560,
+    "Id": 30,
+    "Name": "Samsung 870 QVO 2.5\u00A8 SSD - 1TB",
+    "Price": 618,
+    "Img": "/Images/Components/SSD1.png",
+    "Description": "Samsungs EVO870 1 TB delivers a transfer up to 560 mb/sec. The SSD helps you with loading windows and will give you a new gaming experience.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/SsdPage1"
+  },
+  {
+    "DriveTransferRate": 530,
+    "FourKBRandomRead": 11000,
+    "FourKBRandomWrite": 35000,
+    "NANDFlashMemoryType": "Quad-niveau celle",
+    "Capacity": 2000,
+    "CompatibleBay": "2.5\u00A8",
+    "InternalDateRate": 560,
+    "Id": 31,
+    "Name": "Samsung 870 QVO 2.5\u00A8 SSD - 2TB",
+    "Price": 1249,
+    "Img": "/Images/Components/SSD2.png",
+    "Description": "Samsungs Evo series have taken the world with their amazing transfer speeds. Evo 870 makes your pc read and write faster when its loading.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/SsdPage2"
+  },
+  {
+    "DriveTransferRate": 500,
+    "FourKBRandomRead": 8000,
+    "FourKBRandomWrite": 24000,
+    "NANDFlashMemoryType": "Sata",
+    "Capacity": 500,
+    "CompatibleBay": "2.5\u00A8",
+    "InternalDateRate": 540,
+    "Id": 32,
+    "Name": "Crucial BX500 1TB 3D NAND 2.5\u00A8",
+    "Price": 576,
+    "Img": "/Images/Components/SSD3.png",
+    "Description": "Crucial BX500 1TB 3D NAND 2.5\u0022 is a budget friendly SSD that delivers a solid performance from crucial.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/SsdPage3"
+  }
+]

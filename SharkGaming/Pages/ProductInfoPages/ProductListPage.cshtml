@@ -1,0 +1,253 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.ProductListPageModel
+@{
+}
+
+<div class="text-center">
+    <h1 style="color:white">Components</h1>
+</div>
+
+<br />
+
+<table class="table table-bordered border-black align-content-start align-self-start bg-dark text-white" style="width:32%">
+    <thead>
+        <tr>
+            <th>Filters</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+                <a href="/ProductInfoPages/ProductListPage"> <input class="btn btn-dark" type="submit" value="All Components"</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/ProductInfoPages/AmdCompatiblePage"> <input class="btn btn-dark" type="submit" value="AMD Compatible"</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/ProductInfoPages/IntelCompatiblePage"> <input class="btn btn-dark" type="submit" value="Intel Compatible"</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/ProductInfoPages/RGBComponentsPage"> <input class="btn btn-dark" type="submit" value="RGB Components"</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<form method="post">
+    <div class="row text-center">
+      
+            @foreach (var x in Model.caseFan)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange"><b>@x.Price KR.</b></h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+        
+        
+
+
+        @foreach (var x in Model.cases)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange">@x.Price KR.</h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.cPU)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange">@x.Price KR.</h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.cPUAirCoolings)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange">@x.Price KR.</h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.cPUWaterCoolings)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange">@x.Price KR.</h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.gPU)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange">@x.Price KR.</h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.mdot2s)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange">@x.Price KR.</h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.motherboards)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange"><b>@x.Price KR.</b></h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.powerSupplies)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange"><b>@x.Price KR.</b></h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.ram)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange"><b>@x.Price KR.</b></h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+
+        @foreach (var x in Model.solidStateDrives)
+        {
+            <div style="width:33%" class="mb-4">
+                <a href="@x.Link" class="text-white text-decoration-none">
+                    <div class="card bg-dark">
+                        <img src="@x.Img" alt="Image" class="img-fluid">
+                        <div class="container">
+                            <h4><b>@x.Name</b></h4>
+                            <p>@x.Description</p>
+                            <h4 class="text-orange"><b>@x.Price KR.</b></h4>
+                            <input type="submit" asp-page-handler="AddToCart" asp-route-id="@x.Id" value="Add To Cart" class="btn btn-green" />
+                            <input type="hidden" asp-for="productId">
+                            
+                        </div>
+                    </div>
+                </a>
+            </div>
+        }
+    </div>
+</form>
+
+

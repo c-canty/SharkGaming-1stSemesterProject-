@@ -1,0 +1,38 @@
+[
+  {
+    "PCIExpress": 4,
+    "Capacity": 2000,
+    "CompatibleBay": "M.2",
+    "InternalDateRate": 7000,
+    "Id": 27,
+    "Name": "Samsung 980 PRO 2TB M.2-2280",
+    "Price": 2276.92,
+    "Img": "/Images/Components/Mdot2-1.png",
+    "Description": "Samsung 980 PRO 2TB M.2-2280 with its high performance transfer rate at 7000mb/sec.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/Mdot2Page1"
+  },
+  {
+    "PCIExpress": 4,
+    "Capacity": 1000,
+    "CompatibleBay": "M.2",
+    "InternalDateRate": 7000,
+    "Id": 28,
+    "Name": "Samsung 980 PRO 1TB M.2-2280",
+    "Price": 1346.4,
+    "Img": "/Images/Components/Mdot2-2.png",
+    "Description": "Samsung 980 PRO 1TB M.2-2280 amazing m.2 ssd with high transfer and storage.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/Mdot2Page2"
+  },
+  {
+    "PCIExpress": 3,
+    "Capacity": 500,
+    "CompatibleBay": "M.2",
+    "InternalDateRate": 2300,
+    "Id": 29,
+    "Name": "Crucial P2 500GB 3D NAND",
+    "Price": 319.03,
+    "Img": "/Images/Components/Mdot2-3.png",
+    "Description": "Crucial P2 500GB 3D NAND is a budget friendly m.2 ssd with PCI express 3 with a transfer 2300 mb/sec.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/Mdot2Page3"
+  }
+]

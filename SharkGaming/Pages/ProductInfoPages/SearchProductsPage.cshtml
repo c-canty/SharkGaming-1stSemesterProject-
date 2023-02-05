@@ -1,0 +1,500 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.SearchProductsPageModel
+@{
+}
+
+<h1 class=" text-white">Search All Products</h1>
+<br />
+
+<h3 class=" text-white">Search</h3>
+<form method="post" class="form-inline">
+<div class="input-group mb-3">
+
+    <div class="input-group-prepend">
+
+</div>
+<input asp-for="SearchString" class="form-control mr-1" placeholder="Enter search term" />
+<input type="submit" asp-page-handler="NameSearch" value="Search" class="btn btn-dark" />
+        <span class="input-group"> </span>
+        <h3 class=" text-white">Price Filter</h3>
+        <span class="input-group"> </span>
+<div class="input-group-prepend">
+<span class="input-group-text">Min</span>
+</div>
+<input asp-for="minPrice" class="form-control mr-1"/>
+        
+<div class="input-group-prepend">
+<span class="input-group-text">Max</span>
+</div>
+<input asp-for="maxPrice" class="form-control mr-1"/>
+<input type="submit" asp-page-handler="PriceFilter" value="Filter" class="btn btn-dark" />
+</div>
+</form>
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr class="bg-dark text-white">
+            <th>
+                ID
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                
+            </th>
+            <th>
+                
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Items != null)
+        {
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <td class="text-white">
+                        @item.Id
+                    </td>
+                    <td class="text-white">
+                        @item.Name
+                    </td>
+                    <td class="text-white">
+                        @item.Price
+                    </td>
+                    <td>                      
+                       @if(item.Id == 0)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CasePage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                        @if (item.Id == 1)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CasePage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if(item.Id == 2)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CasePage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                        @if (item.Id == 3)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CaseFanPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if(item.Id == 4)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CaseFanPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 5)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CaseFanPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 6)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuAirCoolingPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 7)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuAirCoolingPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 8)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuAirCoolingPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 9)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuWaterCoolingPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 10)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuWaterCoolingPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 11)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuWaterCoolingPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 12)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                        @if (item.Id == 13)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if (item.Id == 14)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/CpuPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if (item.Id == 15)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/GpuPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if(item.Id == 16)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/GpuPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 17)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/GpuPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 18)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/MotherboardPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 19)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/MotherboardPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 20)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/MotherboardPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 21)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/PowerSupplyPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 22)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/PowerSupplyPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 23)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/PowerSupplyPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 24)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/RamPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 25)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/RamPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 26)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/RamPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 27)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/Mdot2Page1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                       @if(item.Id == 28)
+                       {
+                            <a href="/ProductInfoPages/ComponentInfoPages/Mdot2Page2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                       }
+                        @if (item.Id == 29)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/Mdot2Page3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if (item.Id == 30)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/SsdPage1"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if (item.Id == 31)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/SsdPage2"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if (item.Id == 32)
+                        {
+                            <a href="/ProductInfoPages/ComponentInfoPages/SsdPage3"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if (item.Id == 33)
+                        {
+                            <a href="/ProductInfoPages/PrebuildInfoPages/Prebuild1InfoPage"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if (item.Id == 34)
+                        {
+                            <a href="/ProductInfoPages/PrebuildInfoPages/Prebuild2InfoPage"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+                        @if (item.Id == 35)
+                        {
+                            <a href="/ProductInfoPages/PrebuildInfoPages/Prebuild3InfoPage"> <input class="btn btn-dark" type="submit" value="More info"> </a>
+                        }
+  
+                    </td>
+                    <td>
+                        <form method="post" class="form-inline">
+                            <div class="input-group mb-3">
+
+                                @if (item.Id == 0)
+                                {
+                                   <input type="hidden" asp-for="productId"> Model.productId = 1;
+                                   <input type="hidden" asp-for="price"> Model.price = 999;
+                                }
+                                
+                                @if (item.Id == 1)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 2;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 599;
+                                }
+                                @if (item.Id == 2)
+                                {
+                                   <input type="hidden"t asp-for="productId">
+                                    Model.productId = 3;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1749;
+                                }
+                                @if (item.Id == 3)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 4;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 59;
+                                }
+                                @if (item.Id == 4)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 5;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 159;
+                                }
+                                @if (item.Id == 5)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 6;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 59;
+                                }
+                                @if (item.Id == 6)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 7;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 399;
+                                }
+                                @if (item.Id == 7)
+                                {
+                                   <input type="hidden" asp-for="productId">
+                                    Model.productId = 8;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 449;
+                                }
+                                @if (item.Id == 8)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 9;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 619;
+                                }
+                                @if (item.Id == 9)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 10;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 649;
+                                }
+                                @if (item.Id == 10)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 11;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 999;
+                                }
+                                @if (item.Id == 11)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 12;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 999;
+                                }
+                                @if (item.Id == 12)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 13;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 4657.26;
+                                }
+                                @if (item.Id == 13)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 14;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1858.6;
+                                }
+                                @if (item.Id == 14)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 15;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1164.72;
+                                }
+                                @if (item.Id == 15)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 16;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 13799.45;
+                                }
+                                @if (item.Id == 16)
+                                {
+                                    <input type="hidden"  asp-for="productId">
+                                    Model.productId = 17;
+                                                <input type="hidden" asp-for="price">
+                                    Model.price = 5605.86;
+                                }
+                                @if (item.Id == 17)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 18;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 3881.03;
+                                }
+                                @if (item.Id == 18)
+                                {
+                                   <input type="hidden" asp-for="productId">
+                                    Model.productId = 19;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 2932.32;
+                                }
+                                @if (item.Id == 19)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 20;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1200.21;
+                                }
+                                @if (item.Id == 20)
+                                {
+                                   <input type="hidden" asp-for="productId">
+                                    Model.productId = 21;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1681.73;
+                                }
+                                @if (item.Id == 21)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 22;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 4139.77;
+                                }
+                                @if (item.Id == 22)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 23;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 784.76;
+                                }
+                                @if (item.Id == 23)
+                                {
+                                   <input type="hidden" asp-for="productId">
+                                    Model.productId = 24;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1130.61;
+                                }
+                                @if (item.Id == 24)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 25;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 543;
+                                    
+                                }
+                                @if (item.Id == 25)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 26;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1177;
+                                    
+                                }
+                                @if (item.Id == 26)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 27;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 262.88;
+                                    
+                                }
+                                @if (item.Id == 27)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 28;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 2276.92;
+                                    
+                                }
+                                @if (item.Id == 28)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 29;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1346.4;
+                                    
+                                }
+                                @if (item.Id == 29)
+                                {
+                                   <input type="hidden" asp-for="productId">
+                                    Model.productId = 30;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 319.03;
+                                    
+                                }
+                                @if (item.Id == 30)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 31;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 618;
+                                    
+                                }
+                                @if (item.Id == 31)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 32;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 1249;
+                                    
+                                }
+                                @if (item.Id == 32)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 33;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 576;
+                                    
+                                }
+                                @if (item.Id == 33)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 34;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 25999;
+
+                                }
+                                @if (item.Id == 34)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 35;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 17999;
+                                    
+                                }
+                                @if (item.Id == 35)
+                                {
+                                    <input type="hidden" asp-for="productId">
+                                    Model.productId = 36;
+                                    <input type="hidden" asp-for="price">
+                                    Model.price = 9999;
+
+                                }
+
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">Qty</span>
+                                </div>
+                                <input asp-for="amount" class="form-control mr-1" />
+                                <input type="submit" asp-page-handler="AddToCart" value="Add To Cart" class="btn btn-dark" />
+                            </div>
+                        </form>
+                    </td>
+                    
+
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+   

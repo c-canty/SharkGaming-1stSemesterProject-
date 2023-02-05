@@ -1,0 +1,98 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.ComponentInfoPages.GpuPage1Model
+@{
+}
+
+@foreach (var x in Model.gpus)
+{
+    if (x.Id == 15)
+    {
+        <div class="text-center">
+            <h1 style="color:white">
+                @x.Name
+            </h1>
+        </div>
+
+        <br />
+
+        <form method="post">
+            <div class="row text-center">
+
+                <div class="column col-6">
+                    <img src="@x.Img" style="width:65%" />
+                </div>
+
+                <div class="column col-6">
+                    <h3 style="color:white">Description</h3>
+                    <p style="color:white">@x.Description</p>
+                    <h1 style="color:chocolate">Price: @x.Price KR.</h1>
+                    <input type="submit" asp-page-handler="AddToCart" asp-for="productId" value="Add To Cart" class="btn btn-green" />
+                    <input type="hidden" asp-for="productId">
+                    <br />
+                </div>
+            </div>
+        </form>
+
+
+        <table class="table table-bordered center bg-dark text-white" style="width:85%">
+            <thead>
+                <tr>
+                    <th style="width:50%">Specification</th>
+                    <th style="width: 50%">Info</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Graphics engine</td>
+                    <td>@x.GraphicsEngine</td>
+                </tr>
+                <tr>
+                    <td>CUDA core</td>
+                    <td>@x.CUDACore</td>
+                </tr>
+                <tr>
+                    <td>VR compatible</td>
+                    <td>
+                        @if(x.VRReady == true)
+                        {
+                            <text>True</text>
+                        }
+                        else
+                        {
+                            <text>False</text>
+                        }
+                    </td>
+                </tr>
+                <tr>
+                    <td>Max resolution</td>
+                    <td>@x.MaxResolution</td>
+                </tr>
+                <tr>
+                    <td>Memory size</td>
+                    <td>@x.MemorySize</td>
+                </tr>
+                <tr>
+                    <td>Memory technology</td>
+                    <td>@x.MemoryTechnology</td>
+                </tr>
+                <tr>
+                    <td>Memory bus width</td>
+                    <td>@x.MemoryBusWidth</td>
+                </tr>
+                <tr>
+                    <td>Requried power supply</td>
+                    <td>@x.RequriedPowerSupply</td>
+                </tr>
+                <tr>
+                    <td>Width</td>
+                    <td>@x.Width</td>
+                </tr>
+                <tr>
+                    <td>PCI express</td>
+                    <td>@x.PCIExpress</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}

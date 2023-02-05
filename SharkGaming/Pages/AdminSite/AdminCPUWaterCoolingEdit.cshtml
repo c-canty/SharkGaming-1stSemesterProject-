@@ -1,0 +1,31 @@
+﻿@page
+@model SharkGaming.Pages.AdminSite.AdminCPUWaterCoolingEditModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <div class="form-group">
+            <label asp-for="cPUWaterCooling.Id" class="control-lable"></label>
+            <input asp-for="cPUWaterCooling.Id" class="form-control" readonly="@(true)" />
+        </div>
+        <label asp-for="cPUWaterCooling.Name" class="control-lable"></label>
+        <input asp-for="cPUWaterCooling.Name" class="form-control" />
+        <span asp-validation-for="cPUWaterCooling.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="cPUWaterCooling.Price" class="control-lable"></label>
+        <input asp-for="cPUWaterCooling.Price" class="form-control" />
+        <span asp-validation-for="cPUWaterCooling.Price" class="text-danger"></span>
+    </div>
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<div>
+    <a asp-page="/AdminSite/AdminCPUWaterCoolingListPage">Back to List</a>
+</div>

@@ -1,0 +1,41 @@
+﻿@page
+@model SharkGaming.Pages.OrderInfoPages.CustomerDetailsPageModel
+@{
+}
+<h1 class="text-white">Delivery Information</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="@Model.Phone" class="control-lable text-white"></label>
+                <input asp-for="@Model.Phone" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Email" class="control-lable text-white"></label>
+                <input asp-for="@Model.Email" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Address" class="control-lable text-white"></label>
+                <input asp-for="@Model.Address" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Postcode" class="control-lable text-white"></label>
+                <input asp-for="@Model.Postcode" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Country" class="control-lable text-white"></label>
+                <input asp-for="@Model.Country" class="form-control" />
+
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Confirm" class="btn btn-dark" />
+            </div>
+        </form>
+        <a asp-page="/OrderInfoPages/OrderItemsPage" class="text-white">Back to Cart</a>
+    </div>
+</div>

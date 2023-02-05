@@ -1,0 +1,44 @@
+[
+  {
+    "PSUFormFactor": "ATX",
+    "ColourCategory": "Black",
+    "ClassType": "Titanium",
+    "PowerCapacity": 1600,
+    "Molex": true,
+    "CoolingSystem": "Passiv",
+    "Id": 21,
+    "Name": "Corsair AX1600I Modular Titanium",
+    "Price": 4139.77,
+    "Img": "/Images/Components/PSU1.png",
+    "Description": "Corsair AX1600I Modular Titanium is certified as a Titanium PSU it delivers up to a total 1600W.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/PowerSupplyPage1"
+  },
+  {
+    "PSUFormFactor": "ATX",
+    "ColourCategory": "Black",
+    "ClassType": "Bronze",
+    "PowerCapacity": 550,
+    "Molex": false,
+    "CoolingSystem": "Aktive",
+    "Id": 22,
+    "Name": "NZXT C550",
+    "Price": 784.76,
+    "Img": "/Images/Components/PSU2.png",
+    "Description": "The NZXT C550 Delivers the power of 550W which is the categorized as a bronze certification.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/PowerSupplyPage2"
+  },
+  {
+    "PSUFormFactor": "ATX",
+    "ColourCategory": "Black",
+    "ClassType": "Gold",
+    "PowerCapacity": 750,
+    "Molex": true,
+    "CoolingSystem": "Aktive",
+    "Id": 23,
+    "Name": "Asus ROG Strix 750 Modular",
+    "Price": 1130.61,
+    "Img": "/Images/Components/PSU3.png",
+    "Description": "The Asus ROG Strix 750 Modular gives you the power of 750W its also modular which means you can use your old plugs if you still have them in your case.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/PowerSupplyPage3"
+  }
+]

@@ -1,0 +1,31 @@
+﻿@page
+@model SharkGaming.Pages.AdminSite.AdminGPUEditModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <div class="form-group">
+            <label asp-for="gPU.Id" class="control-lable"></label>
+            <input asp-for="gPU.Id" class="form-control" readonly="@(true)" />
+        </div>
+        <label asp-for="gPU.Name" class="control-lable"></label>
+        <input asp-for="gPU.Name" class="form-control" />
+        <span asp-validation-for="gPU.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="gPU.Price" class="control-lable"></label>
+        <input asp-for="gPU.Price" class="form-control" />
+        <span asp-validation-for="gPU.Price" class="text-danger"></span>
+    </div>
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<div>
+    <a asp-page="/AdminSite/AdminGPUListPage">Back to List</a>
+</div>

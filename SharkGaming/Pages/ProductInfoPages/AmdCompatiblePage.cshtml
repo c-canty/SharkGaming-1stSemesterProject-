@@ -1,0 +1,1462 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.AmdCompatiblePageModel
+@{
+}
+<div class="text-center">
+    <h1 style="color:white">AMD Compatible Components</h1>
+</div>
+
+<br />
+
+<div class="row center">
+    <div class="column col-4 center">
+        <table class="table table-bordered border-black align-content-start bg-dark text-white">
+            <thead>
+                <tr>
+                    <th>Filters</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="/ProductInfoPages/ProductListPage"> <input class="btn btn-dark" type="submit" value="All Components"</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/ProductInfoPages/AmdCompatiblePage"> <input class="btn btn-dark" type="submit" value="AMD Compatible"</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/ProductInfoPages/IntelCompatiblePage"> <input class="btn btn-dark" type="submit" value="Intel Compatible"</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/ProductInfoPages/RGBComponentsPage"> <input class="btn btn-dark" type="submit" value="RGB Components"</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="column col-8 center">
+
+    </div>
+</div>
+
+<br />
+
+<div class="row center">
+    <div class="column col-12 center columnCustom">
+
+        @*Case 1*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CasePage1" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.cases)
+                    {
+                        @if (x.Id == 0)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text> 
+                    }
+                    else Model.Bool = false;
+                     </h1>
+
+                    <img src="~/images/Components/Case1.png" class="img-fluid" />
+                    <br />
+                    Very super cool RGB dickladon gaming case.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.cases)
+                    {
+                        @if (x.Id == 0)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*Case 2*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CasePage2" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.cases)
+                    {
+                        @if (x.Id == 1)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+
+                    <img src="~/images/components/Case2.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.cases)
+                    {
+                        @if (x.Id == 1)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*Case 3*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CasePage3" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.cases)
+                    {
+                        @if (x.Id == 2)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+
+                    <img src="~/images/components/Case3.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.cases)
+                    {
+                        @if (x.Id == 2)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*CaseFan 1*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CaseFanPage1" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.caseFan)
+                    {
+                        @if (x.Id == 3)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+
+                    <img src="~/images/components/CaseFan1.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.caseFan)
+                    {
+                        @if (x.Id == 3)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*CaseFan 2*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CaseFanPage2" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.caseFan)
+                    {
+                        @if (x.Id == 4)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+
+                    <img src="~/images/components/CaseFan2.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.caseFan)
+                    {
+                        @if (x.Id == 4)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*CaseFan 3*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CaseFanPage3" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.caseFan)
+                    {
+                        @if (x.Id == 5)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+
+                    <img src="~/images/components/CaseFan3.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.caseFan)
+                    {
+                        @if (x.Id == 5)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*CPUAirCooling 1*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CpuAirCoolingPage1" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.cPUAirCoolings)
+                    {
+                        @if (x.Id == 6)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+
+                    <img src="~/images/components/CPUair1.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.cPUAirCoolings)
+                    {
+                        @if (x.Id == 6)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*CPUAirCooling 2*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CpuAirCoolingPage2" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.cPUAirCoolings)
+                    {
+                        @if (x.Id == 7)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+
+                    <img src="~/images/components/CPUair2.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.cPUAirCoolings)
+                    {
+                        @if (x.Id == 7)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*CPUAirCooling 3*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/CpuAirCoolingPage3" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @foreach (var x in Model.cPUAirCoolings)
+                    {
+                        @if (x.Id == 8)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+
+                    <img src="~/images/components/CPUair3.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @foreach (var x in Model.cPUAirCoolings)
+                    {
+                        @if (x.Id == 8)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*CPUWaterCooling 1*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/CpuWaterCoolingPage1" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.cPUWaterCoolings)
+                    {
+                        @if (x.Id == 9)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/CPUwater1.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.cPUWaterCoolings)
+                    {
+                        @if (x.Id == 9)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*CPUWaterCooling 2*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/CpuWaterCoolingPage2" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.cPUWaterCoolings)
+                    {
+                        @if (x.Id == 10)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/CPUwater2.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.cPUWaterCoolings)
+                    {
+                        @if (x.Id == 10)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+
+
+        @*CPUWaterCooling 3*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/CpuWaterCoolingPage3" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.cPUWaterCoolings)
+                    {
+                        @if (x.Id == 11)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/CPUwater3.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.cPUWaterCoolings)
+                    {
+                        @if (x.Id == 11)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*CPU 1*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/CpuPage1" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.cPU)
+                    {
+                        @if (x.Id == 12)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/CPU1.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.cPU)
+                    {
+                        @if (x.Id == 12)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />  
+
+        @*CPU 3*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/CpuPage3" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.cPU)
+                    {
+                        @if (x.Id == 14)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/CPU3.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.cPU)
+                    {
+                        @if (x.Id == 14)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*GPU 1*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/GpuPage1" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.gPU)
+                    {
+                        @if (x.Id == 15)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/gpu1.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.gPU)
+                    {
+                        @if (x.Id == 15)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*GPU 2*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/GpuPage2" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.gPU)
+                    {
+                        @if (x.Id == 16)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/gpu2.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.gPU)
+                    {
+                        @if (x.Id == 16)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*GPU 3*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/GpuPage3" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.gPU)
+                    {
+                        @if (x.Id == 17)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/gpu3.png" class="img-fluid" /> 
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.gPU)
+                    {
+                        @if (x.Id == 17)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*Motherboard 1*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/MotherBoardPage1" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.motherboards)
+                    {
+                        @if (x.Id == 18)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/Motherboard1.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.motherboards)
+                    {
+                        @if (x.Id == 18)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*Motherboard 2*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/MotherBoardPage2" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.motherboards)
+                    {
+                        @if (x.Id == 19)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/Motherboard2.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.motherboards)
+                    {
+                        @if (x.Id == 19)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+ 
+
+        @*PowerSupply 1*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/PowerSupplyPage1" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.powerSupplies)
+                    {
+                        @if (x.Id == 21)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/PSU1.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.powerSupplies)
+                    {
+                        @if (x.Id == 21)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*PowerSupply 2*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/PowerSupplyPage2" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.powerSupplies)
+                    {
+                        @if (x.Id == 22)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/PSU2.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.powerSupplies)
+                    {
+                        @if (x.Id == 22)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*PowerSupply 3*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/PowerSupplyPage3" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.powerSupplies)
+                    {
+                        @if (x.Id == 23)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/PSU3.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.powerSupplies)
+                    {
+                        @if (x.Id == 23)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*RAM 1*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/RamPage1" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @if (Model.ram != null)
+                    {
+                        @foreach (var x in Model.ram)
+                        {
+                            @if (x.Id == 24)
+                            {
+                                @x.Name
+                                Model.Bool = true;
+                            }
+                        }
+                        @if (Model.Bool == false)
+                        {
+                            <text>NAME NOT FOUND</text>
+                        }
+                        else Model.Bool = false;
+                    }
+                    else
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    </h1>
+
+                    <img src="~/images/components/RAM1.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @if (Model.ram != null)
+                    {
+                        @foreach (var x in Model.ram)
+                        {
+                            @if (x.Id == 24)
+                            {
+                                @x.Price <text> Kr</text>
+                                Model.Bool = true;
+                            }
+                        }
+                        @if (Model.Bool == false)
+                        {
+                            <text>PRICE NOT FOUND</text>
+                        }
+                        else Model.Bool = false;
+                    }
+                    else
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*RAM 2*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/RamPage2" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @if (Model.ram != null)
+                    {
+                        @foreach (var x in Model.ram)
+                        {
+                            @if (x.Id == 25)
+                            {
+                                @x.Name
+                                Model.Bool = true;
+                            }
+                        }
+                        @if (Model.Bool == false)
+                        {
+                            <text>NAME NOT FOUND</text>
+                        }
+                        else Model.Bool = false;
+                    }
+                    else
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    </h1>
+
+                    <img src="~/images/components/RAM2.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @if (Model.ram != null)
+                    {
+                        @foreach (var x in Model.ram)
+                        {
+                            @if (x.Id == 25)
+                            {
+                                @x.Price <text> Kr</text>
+                                Model.Bool = true;
+                            }
+                        }
+                        @if (Model.Bool == false)
+                        {
+                            <text>PRICE NOT FOUND</text>
+                        }
+                        else Model.Bool = false;
+                    }
+                    else
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*RAM 3*@
+        <div>
+                <a href="/ProductInfoPages/ComponentInfoPages/RamPage3" class="btn btn-dark">
+                    <h1 class="text-center">
+                    @if (Model.ram != null)
+                    {
+                        @foreach (var x in Model.ram)
+                        {
+                            @if (x.Id == 26)
+                            {
+                                @x.Name
+                                Model.Bool = true;
+                            }
+                        }
+                        @if (Model.Bool == false)
+                        {
+                            <text>NAME NOT FOUND</text>
+                        }
+                        else Model.Bool = false;
+                    }
+                    else
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    </h1>
+
+                    <img src="~/images/components/RAM3.png" class="img-fluid" />
+                    <br />
+                    jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                    <br />
+
+                    <h1 class="text-orange">
+                    @if (Model.ram != null)
+                    {
+                        @foreach (var x in Model.ram)
+                        {
+                            @if (x.Id == 26)
+                            {
+                                @x.Price <text> Kr</text>
+                                Model.Bool = true;
+                            }
+                        }
+                        @if (Model.Bool == false)
+                        {
+                            <text>PRICE NOT FOUND</text>
+                        }
+                        else Model.Bool = false;
+                    }
+                    else
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    </h1>
+                </a>
+                <a class="btn btnGreen" style="width:100%">Add to cart</a>
+            </div>
+        <br />
+
+        @*Mdot2 1*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/Mdot2Page1" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.mdot2s)
+                    {
+                        @if (x.Id == 27)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/Mdot2-1.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.mdot2s)
+                    {
+                        @if (x.Id == 27)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*Mdot2 2*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/Mdot2Page2" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.mdot2s)
+                    {
+                        @if (x.Id == 28)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/Mdot2-2.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.mdot2s)
+                    {
+                        @if (x.Id == 28)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*Mdot2 3*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/Mdot2Page3" class="btn btn-dark">
+                <h1 class="text-center">
+                    @foreach (var x in Model.mdot2s)
+                    {
+                        @if (x.Id == 29)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/Mdot2-3.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.mdot2s)
+                    {
+                        @if (x.Id == 29)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*SSD 1*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/SsdPage1" class="btn btn-dark">
+                        <h1 class="text-center">
+                    @foreach (var x in Model.solidStateDrives)
+                    {
+                        @if (x.Id == 30)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/SSD1.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.solidStateDrives)
+                    {
+                        @if (x.Id == 30)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*SSD 2*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/SsdPage2" class="btn btn-dark">
+                        <h1 class="text-center">
+                    @foreach (var x in Model.solidStateDrives)
+                    {
+                        @if (x.Id == 31)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/SSD2.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.solidStateDrives)
+                    {
+                        @if (x.Id == 31)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+        @*SSD 3*@
+        <div>
+            <a href="/ProductInfoPages/ComponentInfoPages/SsdPage3" class="btn btn-dark">
+                        <h1 class="text-center">
+                    @foreach (var x in Model.solidStateDrives)
+                    {
+                        @if (x.Id == 32)
+                        {
+                            @x.Name
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>NAME NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+
+                <img src="~/images/components/SSD3.png" class="img-fluid" />
+                <br />
+                jhfdknlsm v jnsdlksfv  enfljv dknakhbskd,m dnfioenfnflkmlks vkns amsjd vk.
+                <br />
+
+                <h1 class="text-orange">
+                    @foreach (var x in Model.solidStateDrives)
+                    {
+                        @if (x.Id == 32)
+                        {
+                            @x.Price <text> Kr</text>
+                            Model.Bool = true;
+                        }
+                    }
+                    @if (Model.Bool == false)
+                    {
+                        <text>PRICE NOT FOUND</text>
+                    }
+                    else Model.Bool = false;
+                </h1>
+            </a>
+            <a class="btn btnGreen" style="width:100%">Add to cart</a>
+        </div>
+        <br />
+
+    </div>
+</div>

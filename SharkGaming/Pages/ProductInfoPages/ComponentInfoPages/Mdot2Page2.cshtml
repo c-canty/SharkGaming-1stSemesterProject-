@@ -1,0 +1,65 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.ComponentInfoPages.Mdot2Page2Model
+@{
+}
+
+@foreach (var x in Model.mdot2)
+{
+    if (x.Id == 28)
+    {
+        <div class="text-center">
+            <h1 style="color:white">
+                @x.Name
+            </h1>
+        </div>
+
+        <br />
+
+        <form method="post">
+            <div class="row text-center">
+
+                <div class="column col-6">
+                    <img src="@x.Img" style="width:65%" />
+                </div>
+
+                <div class="column col-6">
+                    <h3 style="color:white">Description</h3>
+                    <p style="color:white">@x.Description</p>
+                    <h1 style="color:chocolate">Price: @x.Price KR.</h1>
+                    <input type="submit" asp-page-handler="AddToCart" asp-for="productId" value="Add To Cart" class="btn btn-green" />
+                    <input type="hidden" asp-for="productId">
+                    <br />
+                </div>
+            </div>
+        </form>
+
+
+        <table class="table table-bordered center bg-dark text-white" style="width:85%">
+            <thead>
+                <tr>
+                    <th style="width:50%">Specification</th>
+                    <th style="width: 50%">Info</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Capacity</td>
+                    <td>@x.Capacity</td>
+                </tr>
+                <tr>
+                    <td>Compatible bay</td>
+                    <td>@x.CompatibleBay</td>
+                </tr>
+                <tr>
+                    <td>Internal date rate</td>
+                    <td>@x.InternalDateRate</td>
+                </tr>
+                <tr>
+                    <td>PCI express</td>
+                    <td>@x.PCIExpress</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}

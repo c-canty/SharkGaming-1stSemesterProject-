@@ -1,0 +1,53 @@
+[
+  {
+    "Capacity": 16,
+    "Technology": "DDR4",
+    "FormFactor": "DIMM 288-pin",
+    "Speed": 3200,
+    "LatencyTimings": "CL 16",
+    "Voltage": 1.35,
+    "ColourCategory": "RGB",
+    "AMDCompatible": true,
+    "IntelCompatible": true,
+    "Id": 24,
+    "Name": "Corsair Vengeance RGB Black Pro 16GB",
+    "Price": 543,
+    "Img": "/Images/Components/RAM1.png",
+    "Description": "Corsair Vengeance RGB Pro 16GB will also light up your pc with the solid glow sticks on the top.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/RamPage1"
+  },
+  {
+    "Capacity": 32,
+    "Technology": "DDR4",
+    "FormFactor": "DIMM 288-pin",
+    "Speed": 3200,
+    "LatencyTimings": "CL 16",
+    "Voltage": 1.35,
+    "ColourCategory": "RGB",
+    "AMDCompatible": true,
+    "IntelCompatible": true,
+    "Id": 25,
+    "Name": "G.SKILL TridentZ RGB Series 32GB",
+    "Price": 1177,
+    "Img": "/Images/Components/RAM2.png",
+    "Description": "G.SKILL Tridentz RGP 32 gb will give you what you need and they only have a CL 16 in latency timings which makes them even faster.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/RamPage2"
+  },
+  {
+    "Capacity": 16,
+    "Technology": "DDR4",
+    "FormFactor": "DIMM 288-pin",
+    "Speed": 3200,
+    "LatencyTimings": "CL 18",
+    "Voltage": 1.35,
+    "ColourCategory": "RGB",
+    "AMDCompatible": true,
+    "IntelCompatible": true,
+    "Id": 26,
+    "Name": "Kingston FURY Beast 16GB",
+    "Price": 262.88,
+    "Img": "/Images/Components/RAM3.png",
+    "Description": "Kingston FURY Beast 16GB make gives you a better performance with their 3200 mhz speed and DDR4 technology.",
+    "Link": "/ProductInfoPages/ComponentInfoPages/RamPage3"
+  }
+]

@@ -1,0 +1,86 @@
+﻿@page
+@model SharkGaming.Pages.ProductInfoPages.PrebuildInfoPages.Prebuild1InfoPageModel
+@{
+}
+
+
+@foreach (var x in Model.preBuilds)
+{
+    if (x.Id == 33)
+    {
+        <div class="text-center">
+            <h1 style="color:white">
+                @x.Name
+            </h1>
+        </div>
+
+        <br />
+
+        <form method="post">
+            <div class="row text-center">
+
+                <div class="column col-6">
+                    <img src="@x.Img" style="width:65%" />
+                </div>
+
+                <div class="column col-6">
+                    <h3 style="color:white">Description</h3>
+                    <p style="color:white">@x.Description</p>
+                    <h1 style="color:chocolate">Price: @x.Price KR.</h1>
+                    <input type="submit" asp-page-handler="AddToCart" asp-for="productId" value="Add To Cart" class="btn btn-green" />
+                    <input type="hidden" asp-for="productId">
+                    <br />
+                </div>
+            </div>
+        </form>
+
+
+        <table class="table table-bordered center bg-dark text-white" style="width:85%">
+            <thead>
+                <tr>
+                    <th style="width:50%">Specification</th>
+                    <th style="width: 50%">Info</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Case</td>
+                    <td><a href="@x.Cases.Link">@x.Cases.Name</a></td>
+                </tr>
+                <tr>
+                    <td>Motherboard</td>
+                    <td><a href="@x.Motherboard.Link">@x.Motherboard.Name</a></td>
+                </tr>
+                <tr>
+                    <td>CPU</td>
+                    <td><a href="@x.CPU.Link">@x.CPU.Name</a></td>
+                </tr>
+                <tr>
+                    <td>CPU cooling</td>
+                    <td><a href="@x.CPUCooling.Link">@x.CPUCooling.Name</a></td>
+                </tr>
+                <tr>
+                    <td>GPU</td>
+                    <td><a href="@x.gPU.Link">@x.gPU.Name</a></td>
+                </tr>
+                <tr>
+                    <td>RAM</td>
+                    <td><a href="@x.rAM.Link">@x.rAM.Name</a></td>
+                </tr>
+                <tr>
+                    <td>Power supply</td>
+                    <td><a href="@x.powerSupply.Link">@x.powerSupply.Name</a></td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td><a href="@x.storageClass.Link">@x.storageClass.Name</a></td>
+                </tr>
+                <tr>
+                    <td>Case fan</td>
+                    <td><a href="@x.caseFan.Link">@x.caseFan.Name</a></td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}

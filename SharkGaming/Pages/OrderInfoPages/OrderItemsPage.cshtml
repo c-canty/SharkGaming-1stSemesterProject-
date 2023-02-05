@@ -1,0 +1,90 @@
+﻿@page 
+@model SharkGaming.Pages.OrderInfoPages.OrderItemsPageModel
+@{
+}
+
+<h1 class="text-white">Shopping Cart</h1>
+<br />
+<form method="post">
+    <table class="table table-bordered table-hover table-striped table-opacity" width="60%">
+        <col style="width: 5%" />
+        <col style="width: 77%" />
+        <col style="width: 9%" />
+        <col style="width: 9%" />
+        <thead>
+            <tr class="btn-secondary active">
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    Quantity 
+                </th>              
+                <th>
+                    Actions
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model._cartProducts != null)
+            {
+                foreach (var item in Model._cartProducts)
+                {
+                    <tr class="btn-secondary">
+                        <td>
+                            @item.Id
+                        </td>
+                        <td>
+                            @item.Name
+                        </td>
+                        <td>
+                            @item.Price
+                        </td>                      
+                        <td>
+                            @if (Model._orderItems != null)
+                            {
+                                
+                                foreach (var orderItem in Model._orderItems)
+                                {
+                                    if(orderItem.ProductId == item.Id)
+                                    {
+                                        @orderItem.Amount
+                                    }
+                                    
+                                }
+                            }
+
+                        </td>                     
+                        
+                        
+                        <td>
+   
+                            <input type="submit" asp-page-handler="DeleteFromCart" asp-route-id="@item.Id" value="Delete" class="btn btn-danger" />
+                            <input type="hidden" asp-for="productId" />
+                        </td>
+                       
+                        
+                    </tr>
+                }
+            }   
+        </tbody>
+    </table>
+    @if (Model._cartProducts.Count > 0)
+    {
+        <h4 class="text-white">Shipping fee: @Model.Shipping kr</h4>
+        <h2 class="text-white">Total: @Model.TotalPrice kr</h2>
+
+        <br />
+
+        <a asp-page="/OrderInfoPages/CustomerDetailsPage" class="btn btn-dark">Order</a>
+    }
+    
+
+
+</form>
+

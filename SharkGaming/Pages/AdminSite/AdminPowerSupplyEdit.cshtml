@@ -1,0 +1,31 @@
+﻿@page
+@model SharkGaming.Pages.AdminSite.AdminPowerSupplyEditModel
+@{
+}
+
+<form method="post">
+    <div class="form-group">
+        <div class="form-group">
+            <label asp-for="powerSupply.Id" class="control-lable"></label>
+            <input asp-for="powerSupply.Id" class="form-control" readonly="@(true)" />
+        </div>
+        <label asp-for="powerSupply.Name" class="control-lable"></label>
+        <input asp-for="powerSupply.Name" class="form-control" />
+        <span asp-validation-for="powerSupply.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="powerSupply.Price" class="control-lable"></label>
+        <input asp-for="powerSupply.Price" class="form-control" />
+        <span asp-validation-for="powerSupply.Price" class="text-danger"></span>
+    </div>
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<div>
+    <a asp-page="/AdminSite/AdminPowerSupplyListPage">Back to List</a>
+</div>

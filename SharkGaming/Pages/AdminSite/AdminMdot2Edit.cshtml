@@ -1,0 +1,32 @@
+﻿@page
+@model SharkGaming.Pages.AdminSite.AdminMdot2EditModel
+@{
+}
+
+
+<form method="post">
+    <div class="form-group">
+        <div class="form-group">
+            <label asp-for="mdot2.Id" class="control-lable"></label>
+            <input asp-for="mdot2.Id" class="form-control" readonly="@(true)" />
+        </div>
+        <label asp-for="mdot2.Name" class="control-lable"></label>
+        <input asp-for="mdot2.Name" class="form-control" />
+        <span asp-validation-for="mdot2.Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="mdot2.Price" class="control-lable"></label>
+        <input asp-for="mdot2.Price" class="form-control" />
+        <span asp-validation-for="mdot2.Price" class="text-danger"></span>
+    </div>
+
+    <p>
+        <div class="form-group">
+            <input type="submit" value="Update" class="btn btn-primary" />
+        </div>
+    </p>
+</form>
+
+<div>
+    <a asp-page="/AdminSite/AdminMdot2ListPage">Back to List</a>
+</div>
